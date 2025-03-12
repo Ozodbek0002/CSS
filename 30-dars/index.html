@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Style</title>
+  </head>
+
+  <style>
+    form {
+      width: 60%;
+      margin: auto;
+      border: 1px solid #000;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgb(197, 197, 255);
+
+      h1 {
+        text-align: center;
+        color: #023047;
+      }
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #83C7EC;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #68a8ca;
+    }
+  </style>
+  <body>
+    <form action="/server.php" method="GET">
+      <h1>Malumotlaringiz</h1>
+
+      <label for="firstname">Ism</label>
+      <input
+        type="text"
+        id="firstname"
+        name="firstname"
+        placeholder="Ismingiz"
+      />
+
+      <label for="lastname">Familiya</label>
+      <input
+        type="text"
+        id="lastname"
+        name="lastname"
+        placeholder="Familiyangiz"
+      />
+
+      <label for="country">Davlat</label>
+      <select id="country" name="country">
+        <option value="uzbekistan">O'zbekiston</option>
+        <option value="russia">Rossiya</option>
+        <option value="usa">AQSH</option>
+      </select>
+
+      <label for="message">Xabar</label>
+      <textarea id="message" name="message" placeholder="Xabaringiz"></textarea>
+      <button type="submit" class="button">Jo'natish</button>
+    </form>
+  </body>
+</html>
